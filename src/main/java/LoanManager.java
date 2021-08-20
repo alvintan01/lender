@@ -1,10 +1,12 @@
 public class LoanManager {
     private Loan[] loans = new Loan[100];
     private int loansCount = 0;
+    static int maxLoanAmount;
 
     public void addLoan(String borrower, int amount, double interestRate) {
         loans[loansCount] = new Loan(borrower, amount, interestRate);
         loansCount++;
+
     }
 
     public void setAsPaid(String borrower) {
